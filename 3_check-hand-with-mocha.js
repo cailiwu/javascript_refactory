@@ -7,6 +7,7 @@ var checkHand = function (hand) {
         return 'three of a kind';
     }
 };
+function isPair () { };
 describe('checkHand()', function () {
     it('處理對子', function () {
         var result = checkHand(['2-H', '3-C', '4-D', '5-H', '2-C']);
