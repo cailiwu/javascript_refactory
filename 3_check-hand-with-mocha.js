@@ -13,7 +13,9 @@ function isPair () {
 function highestCount (values) {
 };
 function valuesFromHand (hand) {
-
+    return hand.map(function (card) {
+        return card.split('-')[0];
+    });
 };
 function multiplesIn (hand) {
     return highestCount(valuesFromHand(hand));
