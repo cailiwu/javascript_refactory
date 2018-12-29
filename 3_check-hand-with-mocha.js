@@ -10,9 +10,16 @@ var checkHand = function (hand) {
 function isPair () {
     return multiplesIn(hand) === 2;
 };
-function multiplesIn (hand) {
-    return highestCount(valueFromHand(hand));
+function highestCount (values) {
+
 };
+function valuesFromHand (hand) {
+
+};
+function multiplesIn (hand) {
+    return highestCount(valuesFromHand(hand));
+};
+
 describe('mutiplesIn()', function () {
     it('找到一組重複的點數', function () {
         var result = multiplesIn(['2-H', '3-C', '4-D', '5-H', '2-C']);
