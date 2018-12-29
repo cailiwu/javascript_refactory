@@ -8,7 +8,7 @@ var checkHand = function (hand) {
         return 'three of a kind';
     }
 };
-function isPair () {
+function isPair (hand) {
     return multiplesIn(hand) === 2;
 };
 function highestCount (values) {
