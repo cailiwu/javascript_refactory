@@ -11,7 +11,7 @@ function isPair () {
     return multiplesIn(hand) === 2;
 };
 function multiplesIn (hand) {
-
+    return highestCount(valueFromHand(hand));
 };
 describe('mutiplesIn()', function () {
     it('找到一組重複的點數', function () {
