@@ -1,9 +1,7 @@
 var wish = require('wish');
 
 var checkHand = function (hand) {
-    if (hand[0] === '2-H' && hand[1] === '3-C'
-        && hand[2] === '4-D' && hand[3] === '5-H'
-        && hand[4] === '2-C') {
+    if (isPair(hand)) {
         return 'pair';
     } else {
         return 'three of a kind';
