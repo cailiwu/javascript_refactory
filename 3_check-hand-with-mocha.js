@@ -26,6 +26,12 @@ describe('valueFromhHand()', function () {
         wish(result === ['2', '3', '3', '5', '2']);
     });
 });
+describe('highestCount()', function () {
+    it('返回陣列中同點數手排的最大張數', function () {
+        var result = highestCount(['2', '4', '4', '4', '2']);
+        wish(result === 3);
+    });
+});
 describe('mutiplesIn()', function () {
     it('找到一組重複的點數', function () {
         var result = multiplesIn(['2-H', '3-C', '4-D', '5-H', '2-C']);
