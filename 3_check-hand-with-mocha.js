@@ -24,7 +24,7 @@ function multiplesIn (hand) {
 describe('valueFromhHand()', function () {
     it('只從手排中返回點數', function () {
         var result = valuesFromHand(['2-H', '3-C', '4-D', '5-H', '2-C']);
-        wish(result === ['2', '3', '3', '5', '2']);
+        wish(deepEqual(result, ['2', '3', '4', '5', '2']));
     });
 });
 describe('highestCount()', function () {
