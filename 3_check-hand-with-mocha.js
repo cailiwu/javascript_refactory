@@ -1,4 +1,5 @@
 var wish = require('wish');
+var deepEqual = require('deep-equal');
 
 var checkHand = function (hand) {
     if (isPair(hand)) {
