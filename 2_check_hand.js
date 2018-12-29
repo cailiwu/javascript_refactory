@@ -104,7 +104,8 @@ var checkHand = function (hand) {
         return 'high card';
     }
 };
-console.log(checkHand(['2-H', '3-C', '4-D', '5-H', '2-C']))
+// console.log(checkHand(['2-H', '3-C', '4-D', '5-H', '2-C']))
+console.log('value of checkhand os' + checkHand(['2-H', '3-C', '4-D', '5-H', '2-C']));
   // debugger;
 //   var assert = require('assert');
 //   assert(checkHand(['2-H', '3-C', '4-D', '5-H', '2-C'])==='pair');
