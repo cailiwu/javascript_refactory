@@ -11,7 +11,6 @@ function isPair () {
     return multiplesIn(hand) === 2;
 };
 function highestCount (values) {
-
 };
 function valuesFromHand (hand) {
 
@@ -19,7 +18,12 @@ function valuesFromHand (hand) {
 function multiplesIn (hand) {
     return highestCount(valuesFromHand(hand));
 };
-
+describe('valueFromhHand()', function () {
+    it('只從手排中返回點數', function () {
+        var result = valuesFromHand(['2-H', '3-C', '4-D', '5-H', '2-C']);
+        wish(result === ['2', '3', '3', '5', '2']);
+    });
+});
 describe('mutiplesIn()', function () {
     it('找到一組重複的點數', function () {
         var result = multiplesIn(['2-H', '3-C', '4-D', '5-H', '2-C']);
