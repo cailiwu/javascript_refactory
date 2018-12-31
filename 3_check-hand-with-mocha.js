@@ -153,7 +153,7 @@ function isFullHouse (hand) {
 function isTwoPair (hand) {
     var testCounts = allCounts(valuesFromHand(hand));
     return (testCounts[0] === 2 && testCounts[1] === 2);
-}
+};
 
 module.exports = {
     checkHand: checkHand,
