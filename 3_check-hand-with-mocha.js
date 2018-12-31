@@ -51,6 +51,10 @@ function multiplesIn (hand) {
     return highestCount(valuesFromHand(hand));
 };
 
+function isTriple (hand) {
+    return multiplesIn(hand) === 3;
+};
+
 
 module.exports = {
     checkHand: checkHand,
