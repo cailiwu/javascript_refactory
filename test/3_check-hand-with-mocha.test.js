@@ -51,4 +51,9 @@ describe('checkHand()', function () {
         var result = testModule.checkHand(['2-H', '5-C', '9-D', '7-S', '3-H']);
         wish(result === 'high card');
     });
+
+    it('處理同花', function () {
+        var result = testModule.checkHand(['2-H', '5-H', '9-H', '7-H', '3-H']);
+        wish(result === 'flush');
+    });
 });
