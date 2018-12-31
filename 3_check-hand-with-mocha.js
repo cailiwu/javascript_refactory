@@ -86,24 +86,23 @@ function suitsFor (hand) {
     return hand.map(function (card) {
         return card.split('-')[1];
     });
-}
-
-function isStraight (hand) {
-    return cardsInsequence(valuesFromHand(hand));
-}
-
+};
 function cardsInsequence (values) {
     var sortedValue = values.sort();
     return fourAway(sortedValue) && noMutiples(values);
-}
+};
+
+function isStraight (hand) {
+    return cardsInsequence(valuesFromHand(hand));
+};
 
 function fourAway (values) {
     return ((+values[values.length - 1] - 4 - +values[0]) === 0);
-}
+};
 
 function noMutiples (values) {
     return highestCount(values) == 1;
-}
+};
 
 module.exports = {
     checkHand: checkHand,
