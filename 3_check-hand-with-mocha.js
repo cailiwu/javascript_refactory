@@ -165,5 +165,4 @@ module.exports = {
     suitsFor: suitsFor,
     fourAway: fourAway,
     noMutiples: noMutiples
-
 }
