@@ -60,7 +60,7 @@ describe('checkHand()', function () {
 
     it('處理順子', function () {
         var result = testModule.checkHand(['1-C', '2-H', '3-H', '4-H', '5-H']);
-        wish(result === 'straight');
+        wish(result !== 'straight');
     });
 
     it('處理同花順', function () {
