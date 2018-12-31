@@ -101,6 +101,10 @@ function fourAway (values) {
     return ((+values[values.length - 1] - 4 - +values[0]) === 0);
 }
 
+function noMutiples (values) {
+    return highestCount(values) == 1;
+}
+
 module.exports = {
     checkHand: checkHand,
     isPair: isPair,
@@ -109,6 +113,7 @@ module.exports = {
     multiplesIn: multiplesIn,
     allTheSameSuit: allTheSameSuit,
     suitsFor: suitsFor,
-    fourAway: fourAway
+    fourAway: fourAway,
+    noMutiples: noMutiples
 
 }
