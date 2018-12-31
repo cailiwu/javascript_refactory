@@ -3,6 +3,8 @@ var checkHand = function (hand) {
         return 'pair';
     } else if (isTriple(hand)) {
         return 'three of a kind';
+    } else if (isQuadruple(hand)) {
+        return 'four of a kind';
     }
 };
 

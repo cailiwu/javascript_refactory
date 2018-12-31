@@ -41,4 +41,9 @@ describe('checkHand()', function () {
         var result = testModule.checkHand(['3-H', '3-C', '3-D', '5-H', '2-H']);
         wish(result === 'three of a kind');
     });
+
+    it('處理四條', function () {
+        var result = testModule.checkHand(['3-H', '3-C', '3-D', '3-S', '2-H']);
+        wish(result == 'four of a kind');
+    });
 });
