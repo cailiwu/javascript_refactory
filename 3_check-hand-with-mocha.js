@@ -1,5 +1,7 @@
 var checkHand = function (hand) {
-    if (isPair(hand)) {
+    if (isTwoPair(hand)) {
+        return 'two pair';
+    } else if (isPair(hand)) {
         return 'pair';
     } else if (isFullHouse(hand)) {
         return 'full house';
