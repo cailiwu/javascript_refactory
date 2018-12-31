@@ -7,6 +7,8 @@ var checkHand = function (hand) {
         return 'four of a kind';
     } else if (isFlush(hand)) {
         return 'flush';
+    } else if (isStraight(hand)) {
+        return 'Straight';
     } else {
         return 'high card';
     }
