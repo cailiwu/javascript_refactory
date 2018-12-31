@@ -106,6 +106,9 @@ function noMutiples (values) {
     return highestCount(values) == 1;
 };
 
+function isStraightFlush (hand) {
+    return isStraight(hand) && isFlush(hand);
+}
 module.exports = {
     checkHand: checkHand,
     isPair: isPair,
