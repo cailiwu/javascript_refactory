@@ -93,7 +93,8 @@ function isStraight (hand) {
 }
 
 function cardsInsequence (values) {
-
+    var sortedValue = values.sort();
+    return fourAway(sortedValue) && noMutiples(values);
 }
 
 module.exports = {
