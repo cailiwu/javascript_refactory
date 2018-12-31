@@ -66,18 +66,24 @@ function isQuadruple (hand) {
 }
 
 function isFlush (hand) {
-    return allTheSameResult(suitsFor(hand));
+    return allTheSameSuit(suitsFor(hand));
 }
 
-function allTheSameResult () {
+function allTheSameSuit (suits) {
+    suits.forEach(function (suit) {
+        if (suit !== suit[0]) {
+            return false
+        }
+    });
+    return true;
+};
 
-}
 module.exports = {
     checkHand: checkHand,
     isPair: isPair,
     highestCount: highestCount,
     valuesFromHand: valuesFromHand,
     multiplesIn: multiplesIn,
-    allTheSameResult: allTheSameResult
+    allTheSameSuit: allTheSameSuit
 
 }
