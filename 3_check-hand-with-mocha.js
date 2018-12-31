@@ -70,12 +70,14 @@ function isFlush (hand) {
 }
 
 function allTheSameSuit (suits) {
+    var toReturn = true;
+
     suits.forEach(function (suit) {
-        if (suit !== suit[0]) {
-            return false
+        if (suit !== suits[0]) {
+            toReturn = false;
         }
     });
-    return true;
+    return toReturn;
 };
 
 function suitsFor (hand) {
