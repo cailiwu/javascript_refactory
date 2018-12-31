@@ -67,6 +67,11 @@ describe('checkHand()', function () {
         var result = testModule.checkHand(['1-H', '2-H', '3-H', '4-H', '5-H']);
         wish(result === 'straight flush');
     });
+
+    it('處理葫蘆', function () {
+        var result = testModule.checkHand(['2-D', '2-H', '2-H', '3-D', '3-C']);
+        wish(result === 'full house');
+    });
 });
 
 describe('allTheSameSuit()', function () {
