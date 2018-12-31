@@ -65,6 +65,10 @@ function isQuadruple (hand) {
     return multiplesIn(hand) === 4;
 }
 
+function isFlush (hand) {
+
+}
+
 module.exports = {
     checkHand: checkHand,
     isPair: isPair,
