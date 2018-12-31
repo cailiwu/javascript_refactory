@@ -1,6 +1,8 @@
 var checkHand = function (hand) {
     if (isPair(hand)) {
         return 'pair';
+    } else if (isFullHouse(hand)) {
+        return 'full house';
     } else if (isTriple(hand)) {
         return 'three of a kind';
     } else if (isQuadruple(hand)) {
