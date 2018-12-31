@@ -92,6 +92,10 @@ function isStraight (hand) {
     return cardsInsequence(valuesFromHand(hand));
 }
 
+function cardsInsequence (values) {
+
+}
+
 module.exports = {
     checkHand: checkHand,
     isPair: isPair,
