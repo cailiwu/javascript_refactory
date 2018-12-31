@@ -62,6 +62,11 @@ describe('checkHand()', function () {
         var result = testModule.checkHand(['1-C', '2-H', '3-H', '4-H', '5-H']);
         wish(result === 'straight');
     });
+
+    it('處理同花順', function () {
+        var result = testModule.checkHand(['1-H', '2-H', '3-H', '4-H', '5-H']);
+        wish(result === 'straight flush');
+    });
 });
 
 describe('allTheSameSuit()', function () {
