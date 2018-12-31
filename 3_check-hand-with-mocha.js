@@ -1,7 +1,7 @@
 var checkHand = function (hand) {
     if (isPair(hand)) {
         return 'pair';
-    } else {
+    } else if (isTriple(hand)) {
         return 'three of a kind';
     }
 };
