@@ -66,7 +66,7 @@ function isQuadruple (hand) {
 }
 
 function isFlush (hand) {
-
+    return allTheSameResult(suitsFor(hand));
 }
 
 module.exports = {
