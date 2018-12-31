@@ -143,12 +143,17 @@ function allCounts (values) {
     return totalCounts.sort(function (a, b) {
         return b - a;
     });
-}
+};
 
 function isFullHouse (hand) {
     var theCounts = allCounts(valuesFromHand(hand));
     return (theCounts[0] === 3 && theCounts[1] === 2);
 };
+
+function isTwoPair (hand) {
+    var testCounts = allCounts(valuesFromHand(hand));
+    return (testCounts[0] === 2 && testCounts[1] === 2);
+}
 
 module.exports = {
     checkHand: checkHand,
