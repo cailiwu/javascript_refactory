@@ -57,6 +57,9 @@ function isTriple (hand) {
     return multiplesIn(hand) === 3;
 };
 
+function isQuadruple (hand) {
+    return multiplesIn(hand) === 4;
+}
 
 module.exports = {
     checkHand: checkHand,
