@@ -5,6 +5,8 @@ var checkHand = function (hand) {
         return 'three of a kind';
     } else if (isQuadruple(hand)) {
         return 'four of a kind';
+    } else if (isStraightFlush(hand)) {
+        return 'straight flush';
     } else if (isFlush(hand)) {
         return 'flush';
     } else if (isStraight(hand)) {
