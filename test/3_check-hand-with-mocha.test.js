@@ -75,3 +75,10 @@ describe('allTheSameSuit()', function () {
         wish(!result);
     });
 });
+
+describe('fourAway()', function () {
+    it('如果第一和最後的點數差4, 回報true', function () {
+        var result = testModule.fourAway(['2', '6'])
+        wish(true);
+    });
+});
