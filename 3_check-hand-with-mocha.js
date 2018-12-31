@@ -110,7 +110,8 @@ function noMutiples (values) {
 
 function isStraightFlush (hand) {
     return isStraight(hand) && isFlush(hand);
-}
+};
+
 function allCounts (hand) {
     var counts = {};
 
@@ -141,10 +142,12 @@ function allCounts (hand) {
         return b - a;
     });
 }
+
 function isFullHouse (hand) {
     var theCounts = allCounts(valuesFromHand(hand));
     return (theCounts[0] === 3 && theCounts[1] === 2);
-}
+};
+
 module.exports = {
     checkHand: checkHand,
     isPair: isPair,
