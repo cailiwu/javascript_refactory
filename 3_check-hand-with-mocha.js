@@ -111,6 +111,40 @@ function noMutiples (values) {
 function isStraightFlush (hand) {
     return isStraight(hand) && isFlush(hand);
 }
+function allCounts (hand) {
+    var counts = {};
+
+    values.forEach(function (value, index) {
+        counts[value] = 0;
+        if (value == values[0]) {
+            counts[value] = counts[value] + 1;
+        };
+        if (value == values[1]) {
+            counts[value] = counts[value] + 1;
+        };
+        if (value == values[2]) {
+            counts[value] = counts[value] + 1;
+        };
+        if (value == values[3]) {
+            counts[value] = counts[value] + 1;
+        };
+        if (value == values[4]) {
+            counts[value] = counts[value] + 1;
+        };
+    });
+
+    var totalCounts = Object.keys(counts).map(function (key) {
+        return counts[key];
+    });
+
+    return totalCounts.sort(function (a, b) {
+        return b - a;
+    });
+}
+function isFullHouse (hand) {
+    var theCounts = allCounts(valuesFromHand(hand));
+    return (theCounts[0] === 3 && theCounts[1] === 2);
+}
 module.exports = {
     checkHand: checkHand,
     isPair: isPair,
