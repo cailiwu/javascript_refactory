@@ -78,12 +78,19 @@ function allTheSameSuit (suits) {
     return true;
 };
 
+function suitsFor (hand) {
+    return hand.map(function (card) {
+        return card.split('-')[1];
+    });
+}
+
 module.exports = {
     checkHand: checkHand,
     isPair: isPair,
     highestCount: highestCount,
     valuesFromHand: valuesFromHand,
     multiplesIn: multiplesIn,
-    allTheSameSuit: allTheSameSuit
+    allTheSameSuit: allTheSameSuit,
+    suitsFor: suitsFor
 
 }
