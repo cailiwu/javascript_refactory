@@ -44,6 +44,11 @@ describe('checkHand()', function () {
 
     it('處理四條', function () {
         var result = testModule.checkHand(['3-H', '3-C', '3-D', '3-S', '2-H']);
-        wish(result == 'four of a kind');
+        wish(result === 'four of a kind');
+    });
+
+    it('處理高排', function () {
+        var result = testModule.checkHand(['2-H', '5-C', '9-D', '7-S', '3-H']);
+        wish(result === 'high card');
     });
 });
