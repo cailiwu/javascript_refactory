@@ -97,6 +97,10 @@ function cardsInsequence (values) {
     return fourAway(sortedValue) && noMutiples(values);
 }
 
+function fourAway (values) {
+    return ((+values[values.length - 1] - 4 - +values[0]) === 0);
+}
+
 module.exports = {
     checkHand: checkHand,
     isPair: isPair,
@@ -104,6 +108,7 @@ module.exports = {
     valuesFromHand: valuesFromHand,
     multiplesIn: multiplesIn,
     allTheSameSuit: allTheSameSuit,
-    suitsFor: suitsFor
+    suitsFor: suitsFor,
+    fourAway: fourAway
 
 }
