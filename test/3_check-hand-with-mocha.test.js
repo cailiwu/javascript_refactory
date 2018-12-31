@@ -82,3 +82,10 @@ describe('fourAway()', function () {
         wish(true);
     });
 });
+
+describe('noMutiples()', function () {
+    it('如果所有元素都不同 則return true', function () {
+        var result = testModule.noMutiples(['2', '6'])
+        wish(true);
+    });
+});
