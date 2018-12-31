@@ -8,7 +8,7 @@ var checkHand = function (hand) {
     } else if (isFlush(hand)) {
         return 'flush';
     } else if (isStraight(hand)) {
-        return 'Straight';
+        return 'straight';
     } else {
         return 'high card';
     }
@@ -86,6 +86,10 @@ function suitsFor (hand) {
     return hand.map(function (card) {
         return card.split('-')[1];
     });
+}
+
+function isStraight (hand) {
+    return cardsInsequence(valuesFromHand(hand));
 }
 
 module.exports = {
