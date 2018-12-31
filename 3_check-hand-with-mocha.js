@@ -69,10 +69,15 @@ function isFlush (hand) {
     return allTheSameResult(suitsFor(hand));
 }
 
+function allTheSameResult () {
+
+}
 module.exports = {
     checkHand: checkHand,
     isPair: isPair,
     highestCount: highestCount,
     valuesFromHand: valuesFromHand,
     multiplesIn: multiplesIn,
+    allTheSameResult: allTheSameResult
+
 }

@@ -29,6 +29,7 @@ describe('isPair()', function () {
         wish(result);
     })
 });
+
 describe('checkHand()', function () {
     it('處理對子', function () {
         var result = testModule.checkHand(['2-H', '3-C', '4-D', '5-H', '2-C']);
@@ -55,5 +56,12 @@ describe('checkHand()', function () {
     it('處理同花', function () {
         var result = testModule.checkHand(['2-H', '5-H', '9-H', '7-H', '3-H']);
         wish(result === 'flush');
+    });
+});
+
+describe('allTheSameSuit()', function () {
+    it('如果所有元素皆相同 ，則return true', function () {
+        var result = testModule.allTheSameSuit(['D', 'D', 'D', 'D', 'D']);
+        wish(result)
     });
 });
