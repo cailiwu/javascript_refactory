@@ -64,4 +64,8 @@ describe('allTheSameSuit()', function () {
         var result = testModule.allTheSameSuit(['D', 'D', 'D', 'D', 'D']);
         wish(result)
     });
+    it('如果元素並非全部相同 則回報false', function () {
+        var result = testModule.allTheSameSuit(['D', 'H', 'D', 'D', 'D']);
+        wish(!result);
+    });
 });
