@@ -112,7 +112,7 @@ function isStraightFlush (hand) {
     return isStraight(hand) && isFlush(hand);
 };
 
-function allCounts (hand) {
+function allCounts (values) {
     var counts = {};
 
     values.forEach(function (value, index) {

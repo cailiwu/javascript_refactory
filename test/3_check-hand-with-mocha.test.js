@@ -72,6 +72,11 @@ describe('checkHand()', function () {
         var result = testModule.checkHand(['2-D', '2-H', '2-H', '3-D', '3-C']);
         wish(result === 'full house');
     });
+
+    it('處理兩對', function () {
+        var result = testModule.checkHand(['2-D', '2-H', '3-H', '3-D', '8-D']);
+        wish(result === 'two pair');
+    });
 });
 
 describe('allTheSameSuit()', function () {
